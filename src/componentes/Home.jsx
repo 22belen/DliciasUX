@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
+import Navbar from "./Navbar";
+import Banner from "./Banner";
 
 function Home() {
   const [productos, setProductos] = useState([]);
@@ -14,13 +16,17 @@ function Home() {
   }, []);
 
   return (
-    <div className="container mt-4">
-      <div className="row">
-        {productos.map((producto) => (
-          <Card key={producto.id} producto={producto} />
-        ))}
+    <>
+      <Navbar />
+      <Banner />
+      <div className="container mt-4">
+        <div className="row">
+          {productos.map((producto) => (
+            <Card key={producto.id} producto={producto} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
