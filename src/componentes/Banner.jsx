@@ -8,7 +8,7 @@ function Banner() {
     { src: "/ImgProductos/PromoSolari.jpeg", alt: "Promo Solari" },
     { src: "/ImgProductos/Promoduo.jpeg", alt: "Promo Duo" },
     { src: "/ImgProductos/PromoBig3.jpeg", alt: "Promo Big3" },
-    { src: "/ImgProductos/Empanadas.jpeg", alt: "Empanadas" },
+    { src: "/ImgProductos/PromoEmpanadas.jpeg", alt: "Empanadas" },
   ];
   const anterior = () => {
     setActiveIndex((prev) => (prev === 0 ? imagenes.length - 1 : prev - 1));
@@ -33,7 +33,7 @@ function Banner() {
               style={{
                 height: "750px",
                 objectFit: "contain",
-                background: "#fd8b09",
+                background: "#FF5500",
               }}
             />
           </div>
