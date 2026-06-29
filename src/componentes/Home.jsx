@@ -3,8 +3,10 @@ import Card from "./Card";
 import Navbar from "./Navbar";
 import Banner from "./Banner";
 import Footer from "./Footer";
+
 function Home() {
   const [productos, setProductos] = useState([]);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
 
   useEffect(() => {
     const obtenerProductos = async () => {
@@ -15,13 +17,43 @@ function Home() {
     obtenerProductos();
   }, []);
 
+  const productosFiltrados = categoriaSeleccionada
+    ? productos.filter((p) => p.categoria === categoriaSeleccionada)
+    : productos;
+
   return (
     <>
       <Navbar />
       <Banner />
       <div className="container mt-4">
+        <div className="d-flex justify-content-center gap-2 mb-4">
+          <button
+            className={`btn ${categoriaSeleccionada === null ? "btn-warning" : "btn-outline-warning"}`}
+            onClick={() => setCategoriaSeleccionada(null)}
+          >
+            Todos
+          </button>
+          <button
+            className={`btn ${categoriaSeleccionada === "hamburguesa" ? "btn-warning" : "btn-outline-warning"}`}
+            onClick={() => setCategoriaSeleccionada("hamburguesa")}
+          >
+            🍔 Hamburguesas
+          </button>
+          <button
+            className={`btn ${categoriaSeleccionada === "empanada" ? "btn-warning" : "btn-outline-warning"}`}
+            onClick={() => setCategoriaSeleccionada("empanada")}
+          >
+            🥟 Empanadas
+          </button>
+          <button
+            className={`btn ${categoriaSeleccionada === "acompañamiento" ? "btn-warning" : "btn-outline-warning"}`}
+            onClick={() => setCategoriaSeleccionada("acompañamiento")}
+          >
+            🍟 Acompañamientos
+          </button>
+        </div>
         <div className="row">
-          {productos.map((producto) => (
+          {productosFiltrados.map((producto) => (
             <Card key={producto.id} producto={producto} />
           ))}
         </div>
