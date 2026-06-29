@@ -33,14 +33,6 @@ function Navbar() {
               </a>
             </li>
           </ul>
-          {token && (
-            <button
-              className="btn btn-outline-light ms-3"
-              onClick={handleLogout}
-            >
-              Cerrar sesión
-            </button>
-          )}
         </div>
       </div>
     </nav>

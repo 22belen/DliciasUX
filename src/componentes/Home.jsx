@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 import Navbar from "./Navbar";
 import Banner from "./Banner";
-
+import Footer from "./Footer";
 function Home() {
   const [productos, setProductos] = useState([]);
 
@@ -26,6 +26,7 @@ function Home() {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
