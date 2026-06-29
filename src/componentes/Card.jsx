@@ -1,3 +1,5 @@
+import "../App.css";
+
 function Card({ producto }) {
   return (
     <div className="col-md-4 mb-4">
