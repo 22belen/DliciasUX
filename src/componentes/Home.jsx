@@ -58,6 +58,12 @@ function Home() {
           >
             Promociones
           </button>
+          <button
+            className={`btn ${categoriaSeleccionada === "bebida" ? "btn-warning" : "btn-outline-warning"}`}
+            onClick={() => setCategoriaSeleccionada("bebida")}
+          >
+            Bebidas
+          </button>
         </div>
         <div className="row">
           {productosFiltrados.map((producto) => (
