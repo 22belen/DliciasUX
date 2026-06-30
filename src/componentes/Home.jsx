@@ -51,6 +51,12 @@ function Home() {
           >
             🍟 Acompañamientos
           </button>
+          <button
+            className={`btn ${categoriaSeleccionada === "promo" ? "btn-warning" : "btn-outline-warning"}`}
+            onClick={() => setCategoriaSeleccionada("promo")}
+          >
+            Promociones
+          </button>
         </div>
         <div className="row">
           {productosFiltrados.map((producto) => (
