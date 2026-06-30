@@ -6,10 +6,6 @@ const useStore = create((set) => ({
     localStorage.setItem("token", token);
     set({ token });
   },
-  logout: () => {
-    localStorage.removeItem("token");
-    set({ token: null });
-  },
 }));
 
 export default useStore;
