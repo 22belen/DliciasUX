@@ -27,7 +27,7 @@ function Home() {
       <Navbar />
       <Banner />
       <div className="container mt-4">
-        <div className="d-flex justify-content-center gap-2 mb-4">
+        <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
           <button
             className={`btn ${categoriaSeleccionada === null ? "btn-warning" : "btn-outline-warning"}`}
             onClick={() => setCategoriaSeleccionada(null)}
