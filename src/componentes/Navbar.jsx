@@ -1,8 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import useCartStore from "../cartStore";
 
 function Navbar() {
-  const navigate = useNavigate();
   const irAlFooter = () => {
     document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
   };
