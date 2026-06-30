@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import useCartStore from "../carStore";
+import useCartStore from "../cartStore";
 
 function Navbar() {
   const navigate = useNavigate();

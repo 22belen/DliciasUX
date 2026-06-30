@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useCartStore from "../carStore";
+import useCartStore from "../cartStore";
 
 function Card({ producto }) {
   const [mostrarModal, setMostrarModal] = useState(false);
