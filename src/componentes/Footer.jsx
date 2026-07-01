@@ -2,7 +2,6 @@ function Footer() {
   return (
     <footer className="bg-warning text-dark mt-5 py-5" id="footer">
       <div className="container">
-        {/* Nombre del negocio */}
         <div className="text-center mb-4">
           <h3 className="fw-bold mb-2">Delicias del Plata</h3>
           <p className="mb-1 mt-1">
