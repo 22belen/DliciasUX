@@ -5,6 +5,7 @@ function Navbar() {
     document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
   };
   const carrito = useCartStore((state) => state.carrito);
+  const toggleCarrito = useCartStore((state) => state.toggleCarrito);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,7 +48,10 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <button className="btn btn-outline-light position-relative">
+              <button
+                className="btn btn-outline-light position-relative"
+                onClick={toggleCarrito}
+              >
                 🛒
                 {carrito.length > 0 && (
                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

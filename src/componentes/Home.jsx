@@ -3,6 +3,7 @@ import Card from "./Card";
 import Navbar from "./Navbar";
 import Banner from "./Banner";
 import Footer from "./Footer";
+import Carrito from "./Carrito";
 import "../App.css";
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
   return (
     <>
       <Navbar />
+      <Carrito />
       <Banner />
       <div className="container mt-4">
         <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
