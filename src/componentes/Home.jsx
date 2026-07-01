@@ -38,19 +38,19 @@ function Home() {
             className={`btn ${categoriaSeleccionada === "hamburguesa" ? "btn-warning" : "btn-outline-warning"}`}
             onClick={() => setCategoriaSeleccionada("hamburguesa")}
           >
-            🍔 Hamburguesas
+            Hamburguesas
           </button>
           <button
             className={`btn ${categoriaSeleccionada === "empanada" ? "btn-warning" : "btn-outline-warning"}`}
             onClick={() => setCategoriaSeleccionada("empanada")}
           >
-            🥟 Empanadas
+            Empanadas
           </button>
           <button
             className={`btn ${categoriaSeleccionada === "acompañamiento" ? "btn-warning" : "btn-outline-warning"}`}
             onClick={() => setCategoriaSeleccionada("acompañamiento")}
           >
-            🍟 Acompañamientos
+            Acompañamientos
           </button>
           <button
             className={`btn ${categoriaSeleccionada === "promo" ? "btn-warning" : "btn-outline-warning"}`}
